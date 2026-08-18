@@ -1,0 +1,38 @@
+body{
+    background-color: #1a1a2e;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;    
+    text-align: center;
+}
+
+h1{
+    color: #00ff88;
+    letter-spacing: 4px;
+}
+
+#track {
+    position: relative;
+    width: 90%;
+    height: 150px;
+    margin: 40px auto;
+    background: #16213e;
+    border: 2px solid #0f3460;
+}
+
+#player, #ai {
+    position: absolute;
+    left: 0;
+    font-size: 34px;
+}
+
+#player { top: 20px; }
+#ai { top: 85px; }
+
+#finish-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 8px;
+    background: repeating-linear-gradient(45deg, #fff, #fff 6px, #111 6px, #111 12px);
+}
