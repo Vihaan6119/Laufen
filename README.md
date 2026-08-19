@@ -1,4 +1,4 @@
-# Laufen 🚗
+# Laufen 
 
 "Laufen" is German for "to run". It's my typing race game: a paragraph shows up, you type it, and your car races an AI car to the finish line.
 
