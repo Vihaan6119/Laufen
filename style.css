@@ -1,13 +1,34 @@
-body{
-    background-color: #1a1a2e;
-    color: #ffffff;
-    font-family: 'Courier New', monospace;    
+body {
+    background: #ece7df;
+    color: #5b534a;
+    font-family: 'Courier New', monospace;
     text-align: center;
+    margin: 0;
 }
 
-h1{
-    color: #00ff88;
-    letter-spacing: 4px;
+h1 { color: #c96f4a; letter-spacing: 6px; }
+
+#sentence { letter-spacing: 2px; color: #8a8177; }
+
+#input {
+    background: #e0d9cf;
+    border: 1px solid #c9c0b4;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-family: inherit;
+    font-size: 16px;
+    color: #444;
+    outline: none;
+}
+
+#restart {
+    background: #d8d0c5;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-family: inherit;
+    cursor: pointer;
+    color: #5b534a;
 }
 
 #track {
@@ -15,24 +36,87 @@ h1{
     width: 90%;
     height: 150px;
     margin: 40px auto;
-    background: #16213e;
-    border: 2px solid #0f3460;
+    background: #e3dccd;
+    border: 1px solid #cfc6b8;
+    border-radius: 8px;
 }
 
-#player, #ai {
-    position: absolute;
-    left: 0;
-    font-size: 34px;
-}
-
+#player, #ai { position: absolute; left: 0; font-size: 34px; }
 #player { top: 20px; }
 #ai { top: 85px; }
 
 #finish-line {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 0; top: 0;
     height: 100%;
     width: 8px;
-    background: repeating-linear-gradient(45deg, #fff, #fff 6px, #111 6px, #111 12px);
+    background: repeating-linear-gradient(45deg,
+        #5b534a, #5b534a 6px,
+        #ece7df 6px, #ece7df 12px);
+}
+
+#level-screen {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #ece7df;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    z-index: 10;
+    color: #5b534a;
+}
+
+#level-screen button {
+    background: #d8d0c5;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    color: #5b534a;
+}
+
+#sentence span { color: #8a8177; }
+#sentence .good { color: #4a9e4a; }
+#sentence .bad { color: #b03030; background: #d99894; }
+
+#input { position: absolute; opacity: 0; pointer-events: none; }
+#sentence { cursor: text; }
+#sentence span { color: #8a8177; }
+#sentence .good { color: #4a9e4a; }
+#sentence .bad { color: #b03030; background: #d99894; }
+#sentence .caret { border-left: 2px solid #444; }
+
+#track { height: 220px; width: 95%; }
+#player { top: 40px; }
+#ai { top: 130px; }
+#timer { font-size: 34px; font-weight: bold; color: #c96f4a; margin-top: 10px; }
+#time-row { display: flex; gap: 10px; }
+#time-row button {
+    background: #d8d0c5; border: none; border-radius: 6px;
+    padding: 8px 16px; font-family: inherit; cursor: pointer; color: #5b534a;
+}
+
+#timer { position: absolute; top: 20px; right: 30px; margin: 0; }
+#track { height: 260px; width: 96%; }
+#player, #ai { transition: margin-left 0.1s linear; }
+
+#result {
+    display: none;
+    width: 90%;
+    margin: 2px auto;
+    padding: 20px;
+    background: #e3dccd;
+    border: 1px solid #cfc6b8;
+    border-radius: 8px;
+}
+
+#result button {
+    margin-top: 12px;
+    background: #d8d0c5; border: none; border-radius: 6px;
+    padding: 10px 20px; font-family: inherit; cursor: pointer; color: #5b534a;
 }
